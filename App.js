@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, TextInput, Button, Alert } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 
-// Alexander Rodriguez 2022-0005
+// Alexander Rodriguez 20220005
 export default function App() {
   const [nombre, setNombre] = useState('');
   const [apellido, setApellido] = useState('');
   const [latitud, setLatitud] = useState('');
   const [longitud, setLongitud] = useState('');
   const [marcador, setMarcador] = useState(null);
+  const [ciudadPais, setCiudadPais] = useState('');
 
 
   useEffect(() => {
@@ -107,7 +108,7 @@ export default function App() {
   );
 }
 
-// Alexander Rodriguez 2022-0005
+// Alexander Rodriguez 20220005
 const styles = StyleSheet.create({
   container: {
     flex: 1,
