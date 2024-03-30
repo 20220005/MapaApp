@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
+import { StyleSheet, View, TextInput, Button, Alert } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 
+// Alexander Rodriguez 2022-0005
 export default function App() {
   const [nombre, setNombre] = useState('');
   const [apellido, setApellido] = useState('');
   const [latitud, setLatitud] = useState('');
   const [longitud, setLongitud] = useState('');
   const [marcador, setMarcador] = useState(null);
-  const [ciudadPais, setCiudadPais] = useState('');
+
 
   useEffect(() => {
     if (marcador) {
@@ -98,7 +99,7 @@ export default function App() {
           <Marker
             coordinate={{ latitude: marcador.latitude, longitude: marcador.longitude }}
             title={`${nombre} ${apellido}`}
-            description={`Latitud: ${latitud}, Longitud: ${longitud} Ciudad/Pais: ${ciudadPais}`}
+            description={`Latitud: ${latitud}, Longitud: ${longitud}`}
           />
         </MapView>
       )}
@@ -106,6 +107,7 @@ export default function App() {
   );
 }
 
+// Alexander Rodriguez 2022-0005
 const styles = StyleSheet.create({
   container: {
     flex: 1,
